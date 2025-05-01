@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEAFSYNC - Connecting People with Nature</title>
+    <meta
+      name="description"
+      content="We leverage technology and the power of community to promote environmental sustainability and reconnect people with the natural world."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              green: {
+                100: "#e6f7e9",
+                200: "#c3eac9",
+                300: "#9fdca9",
+                400: "#7bcf89",
+                500: "#57c169",
+                600: "#2F7A43",
+                700: "#246834",
+                800: "#1a5526",
+                900: "#0f4217",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white">
+    <header
+      class="container mx-auto px-4 py-6 flex justify-between items-center"
+    >
+      <div class="flex items-center gap-2">
+        <div
+          class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center"
+        >
+          <!-- Leaf SVG icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-6 h-6"
+          >
+            <path
+              d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"
+            ></path>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+          </svg>
+        </div>
+        <span class="text-2xl font-bold text-gray-900">LEAFSYNC</span>
+      </div>
+
+      <nav>
+        <ul class="flex gap-8">
+          <li>
+            <a
+              href="#about"
+              class="text-lg font-medium text-gray-900 hover:text-green-600"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="text-lg font-medium text-gray-900 hover:text-green-600"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-lg font-medium text-gray-900 hover:text-green-600"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Connecting<br />
+            People with<br />
+            Nature
+          </h1>
+          <p class="text-lg text-gray-800 mb-8 max-w-lg">
+            We leverage technology and the power of community to promote
+            environmental sustainability and reconnect people with the natural
+            world.
+          </p>
+          <a
+            href="#get-started"
+            class="inline-block bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-md transition-colors"
+          >
+            Get Started
+          </a>
+        </div>
+
+        <div class="md:w-1/2 relative"></div>
+      </div>
+    </main>
+  </body>
+</html>
