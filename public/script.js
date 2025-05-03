@@ -465,8 +465,28 @@ document.addEventListener("DOMContentLoaded", () => {
     instagramFeed.appendChild(postElement);
   });
 
-  // Donation form submission
   const donationForm = document.getElementById("donationForm");
+  const amountButtons = document.querySelectorAll(".amount-btn");
+  const amountInput = document.getElementById("amount");
+
+  amountButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      amountButtons.forEach((b) => b.classList.remove("text-white"));
+      amountButtons.forEach((b) => b.classList.remove("bg-[#113259]"));
+      amountButtons.forEach((b) => b.classList.add("bg-[#edf2f7]"));
+      btn.classList.remove("bg-[#edf2f7]");
+      btn.classList.add("bg-[#113259]");
+      btn.classList.add("text-white");
+
+      amountInput.value = btn.getAttribute("data-amount");
+    });
+  });
+
+  amountInput.addEventListener("input", () => {
+    amountButtons.forEach((b) => b.classList.remove("text-white"));
+    amountButtons.forEach((b) => b.classList.remove("bg-[#113259]"));
+    amountButtons.forEach((b) => b.classList.add("bg-[#edf2f7]"));
+  });
 
   donationForm.addEventListener("submit", (e) => {
     e.preventDefault();
