@@ -22,12 +22,16 @@ html {
 }
 
 #leaderboardList::-webkit-scrollbar-thumb {
-  background: #22c55e;
+  background: #519530;
   border-radius: 10px;
 }
 
 #leaderboardList::-webkit-scrollbar-thumb:hover {
-  background: #16a34a;
+  background: #239541;
+}
+
+.bg-sunset {
+  background-color: #dc582a;
 }
 
 /* Swiper custom styles */
@@ -46,11 +50,18 @@ html {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #16a34a !important;
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }
 
 .swiper-pagination-bullet-active {
-  background: #16a34a !important;
+  background: white !important;
 }
 
 /* Event card content */
