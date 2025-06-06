@@ -27,48 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  let finalValue = 0;
-  const totalDonation = document.getElementById("totalDonation");
-
-  function animateCounter(element, start, end, duration) {
-    let startTime = null;
-    function animation(currentTime) {
-      if (!startTime) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-      const value = Math.floor(progress * (end - start) + start);
-
-      element.textContent = value.toLocaleString();
-
-      if (progress < 1) {
-        requestAnimationFrame(animation);
-      }
-    }
-    requestAnimationFrame(animation);
-  }
-
-  async function loadTotalDonation() {
-    try {
-      const response = await fetch("../backend/getamount.php");
-      const data = await response.json();
-      finalValue = data.total || 0;
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animateCounter(totalDonation, 0, finalValue, 2000);
-            observer.unobserve(entry.target);
-          }
-        });
-      });
-
-      observer.observe(totalDonation);
-    } catch (error) {
-      console.error("error ambil total donasi:", error);
-    }
-  }
-
-  loadTotalDonation();
-
   let donorsData = [];
 
   fetch("../backend/getdonors.php")

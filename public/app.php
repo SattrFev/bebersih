@@ -6,9 +6,8 @@ require_once dirname(__FILE__) . '/midtrans-php-master/Midtrans.php';
 \Midtrans\Config::$isSanitized = true;
 \Midtrans\Config::$is3ds = true;
 
-// ini yang penting: ambil json dari body
 $raw = file_get_contents("php://input");
-$data = json_decode($raw, true); // true biar jadi array, bukan object
+$data = json_decode($raw, true); 
 
 $params = array(
     'transaction_details' => array(
@@ -18,7 +17,7 @@ $params = array(
     'customer_details' => array(
         'first_name' => $data['name'],
         'email' => $data['email'],
-        'phone' => $data['number'], // lu tulis 'humber' di PHP tapi 'number' di JS
+        'phone' => $data['number'], 
     ),
 );
 

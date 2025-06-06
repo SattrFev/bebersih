@@ -1,6 +1,6 @@
 <?php
 header("Content-Type: application/json");
-require_once "conn.php";
+include "conn.php";
 
 $sql = "SELECT * FROM events ORDER BY date ASC";
 $result = mysqli_query($conn, $sql);
@@ -21,4 +21,3 @@ if ($result && mysqli_num_rows($result) > 0) {
 }
 
 echo json_encode($events);
-?>
