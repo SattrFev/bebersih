@@ -27,8 +27,11 @@ if ($getevents_result->num_rows > 0) {
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.min.css" />
-  <script src="/node_modules/swiper/swiper-bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="tailwind.config.js"></script>
   <script
     type="text/javascript"
