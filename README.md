@@ -73,12 +73,6 @@ Tujuan utamanya adalah menjembatani:
 
 ---
 
-## 🙌 Credits
-
-terinspirasi dari **MrBeast x TeamTrees** 🌱  
-
----
-
 > ⏳ **Waktu Pengerjaan:** 9jam  
 > 🏆 **Nilai:** Diskualifikasi (telat submit) 
 
